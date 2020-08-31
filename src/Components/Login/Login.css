@@ -1,0 +1,28 @@
+.form-style{
+    background: pink;
+    display: block;
+    margin: auto;
+    height: 50vh;
+    width: 50%;
+}
+.form-style input {
+    padding: 0;
+    margin: auto;
+    width: 90%;
+    height: 3.5vh;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+
+}
+
+.form-style input:focus {
+    background: plum;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.form-style label {
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
