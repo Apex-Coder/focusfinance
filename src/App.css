@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root {
+
+  --navBarBackground: #54beff;
+  --testingBackground: #23232e;
+  --textWhite: #ffffff;
+}
+*,*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ececec;
+  /* background: var(--testingBackground); */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+
 .App {
   text-align: center;
 }
