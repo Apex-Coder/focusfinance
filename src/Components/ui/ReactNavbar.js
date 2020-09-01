@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
+import app from '../../Configuration/base';
 
 export  class ReactNavbar extends Component {
     render() {
@@ -15,6 +16,7 @@ export  class ReactNavbar extends Component {
                   <li><a href="#">Savings</a></li>
                   <li><a href="#">Income</a></li>
                   <li><a href="#">Settings</a></li>
+                  <li><a onClick={() => app.auth().signOut()}>Sign Out</a></li>
                 </ul>
               </nav>
               <label for="nav-toggle" className="nav-toggle-label">

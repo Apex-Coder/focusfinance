@@ -9,7 +9,6 @@ const Dashboard = () => {
             <ReactNavbar />
             <br /><br /><br /><br />
             <h1>Dashboard of Focus Finance</h1>
-            <button onClick={() => app.auth().signOut()}>Sign Out</button>
         </div>
     );
 };
