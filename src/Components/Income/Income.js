@@ -1,17 +1,17 @@
 import React from 'react';
 
 import ReactNavbar from '../ui/ReactNavbar';
-import app from '../../Configuration/base';
 
-const Dashboard = () => {
+const Income = () => {
     return (
         <>
             <ReactNavbar />
             <div className="main">
-                <h1>Dashboard of Focus Finance</h1>
+                <h1>Income</h1>
             </div>
+            
         </>
-    );
+    )
 };
 
-export default Dashboard;
+export default Income;

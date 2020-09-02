@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root {
 
-  --navBarBackground: #54beff;
+  --navBarBackground: #438ae8;
   --testingBackground: #23232e;
   --textWhite: #ffffff;
 }
@@ -25,6 +25,10 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.main {
+  margin-top: 14vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -54,5 +58,16 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    margin-top: 11vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    margin-top: 13vh;
   }
 }

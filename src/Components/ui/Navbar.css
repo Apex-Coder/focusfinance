@@ -3,9 +3,9 @@ header {
   background: var(--navBarBackground);
   text-align: center;
   position: fixed;
-  z-index: 999;
+  top: 0; 
   width: 100%;
-
+  
 }
 
 .logo {
@@ -87,7 +87,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(44, 135, 190);
+  color: rgb(0, 75, 173);
 }
 
 .nav-toggle:checked ~ nav {
@@ -138,7 +138,7 @@ nav a:hover {
     content: '';
     display: block;
     height: 5px;
-    background: rgb(44, 135, 190);
+    background: rgb(0, 75, 173);
     position: absolute;
     top: -.75em;
     left: 0;

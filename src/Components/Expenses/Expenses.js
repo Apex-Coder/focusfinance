@@ -1,17 +1,19 @@
 import React from 'react';
 
 import ReactNavbar from '../ui/ReactNavbar';
-import app from '../../Configuration/base';
+import './Expenses.css';
 
-const Dashboard = () => {
+const Expenses = () => {
     return (
         <>
             <ReactNavbar />
+            {/* <br /><br /><br /><br /> */}
             <div className="main">
-                <h1>Dashboard of Focus Finance</h1>
+                <h1>Expenses</h1>
             </div>
+            
         </>
     );
 };
 
-export default Dashboard;
+export default Expenses;

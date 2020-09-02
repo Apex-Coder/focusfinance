@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
 import './Navbar.css';
 import app from '../../Configuration/base';
 
@@ -11,11 +13,11 @@ export  class ReactNavbar extends Component {
               <input type="checkbox" className="nav-toggle" id="nav-toggle" />
               <nav>
                 <ul>
-                  <li><a href="#">Dashboard</a></li>
-                  <li><a href="#">Expenses</a></li>
-                  <li><a href="#">Savings</a></li>
-                  <li><a href="#">Income</a></li>
-                  <li><a href="#">Settings</a></li>
+                  <li><Link to="/">Dashboard</Link></li>
+                  <li><Link to="/expenses">Expenses</Link></li>
+                  <li><Link to="/savings">Savings</Link></li>
+                  <li><Link to="/income">Income</Link></li>
+                  <li><Link to="/settings">Settings</Link></li>
                   <li><a onClick={() => app.auth().signOut()}>Sign Out</a></li>
                 </ul>
               </nav>
