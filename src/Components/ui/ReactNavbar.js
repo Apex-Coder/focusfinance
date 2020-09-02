@@ -21,7 +21,7 @@ export  class ReactNavbar extends Component {
                   <li><a onClick={() => app.auth().signOut()}>Sign Out</a></li>
                 </ul>
               </nav>
-              <label for="nav-toggle" className="nav-toggle-label">
+              <label htmlFor="nav-toggle" className="nav-toggle-label">
                 <span></span>
               </label>
             </header>
