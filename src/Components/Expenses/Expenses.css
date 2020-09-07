@@ -1,0 +1,27 @@
+.container {
+    margin-top: 9vh;
+    /* padding-right: 10%;
+    padding-left: 10%; */
+    margin-right: auto;
+    margin-left: auto;
+    
+    height: 100vh;
+    width: 80%;
+}
+
+.title {
+    float: left;
+    padding: 0;
+    margin-bottom: 1vh;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;               
+    background-color:#bfbfbf;
+    height: 1px;
+  }
+  
+
