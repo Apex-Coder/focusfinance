@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ReactNavbar from '../ui/ReactNavbar';
-import app from '../../Configuration/base';
 
 const Dashboard = () => {
     return (
