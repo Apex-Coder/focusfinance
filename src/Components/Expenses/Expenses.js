@@ -16,9 +16,8 @@ const Expenses = () => {
             <ReactNavbar />
             <div className="container">
                 <div>
-                    <h1 className="title">{displayname}</h1>
-
                     <span>
+                        <h1 className="title">{displayname}</h1>
                         <button type="button" className="">Add +</button>
                     </span>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import app from '../../Configuration/base';
 
 const useEntries = () => {
@@ -8,7 +9,7 @@ const useEntries = () => {
     useEffect(() => {
         const unsubscribe = app
         .firestore()
-        .collection('users/' + userId +'/expenses')
+        .collection('users/' + userId + '/income')
         .onSnapshot((snapshot) => {
             const newEntries = snapshot.docs.map((doc) => ({
                 id: doc.id,
@@ -19,14 +20,14 @@ const useEntries = () => {
         })
 
         return () => unsubscribe();
-    }, []);
+    }, [userId]);
 
     return entries;
 }
 const Entries = ()=> {
     const entries = useEntries();
     return (
-        <div> 
+        <>
             <h4>List of Expenses</h4>
             <div>
                 <label>Sort By: </label>
@@ -53,7 +54,7 @@ const Entries = ()=> {
                 </li>
             )}
             </div>
-        </div>
+        </>
     )
 };
 
