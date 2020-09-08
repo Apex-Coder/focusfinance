@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { Container, Row, Button } from 'react-bootstrap';
 
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './income-entry';
@@ -12,13 +13,14 @@ const Income = () => {
     return (
         <>
             <ReactNavbar />
-            <div className="main">
-                <div>
+            <div className="block"></div>
+            <Container fluid>
+                <Row>
                     <span>
-                        <h1 className="title">{displayname}</h1>
-                        <button type="button" className="">Add +</button>
+                        <h1>{displayname}</h1>
+                        <Button variant="primary" >Add +</Button>
                     </span>
-                </div>
+                </Row>
                 <hr />
                 <div>
                     <h3>Entries</h3>
@@ -30,7 +32,7 @@ const Income = () => {
                         <AddEntryModal modalIsOpen={setModalIsOpen} />
                     </Modal>
                 </div>
-            </div>
+            </Container>
             
         </>
     )
