@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import app from '../../Configuration/base';
 
@@ -10,13 +10,16 @@ const AddEntryModal = (props) => {
     const [amount, setAmount] = useState('');
     const [note, setNote] = useState('');
 
-    const handleAddEntryTest = (event) => {
+    const userId = app.auth().currentUser.uid;
+    const handleAddEntryTest = useCallback(async event => {
         event.preventDefault();
-
-        app
+        
+        try {
+            await app
             .firestore()
-            .collection('testing-data')
+            .collection('users/' + userId +'/expenses')
             .add({
+                "uid": userId,   
                 "title": title,
                 "account": account,
                 "category": category,
@@ -24,18 +27,14 @@ const AddEntryModal = (props) => {
                 "amount": amount,
                 "note": note
             })
-            .then(() => {
-                setTitle('');
-                setAccount('');
-                setCategory('');
-                setDate('');
-                setAmount('');
-                setNote('');
-            })
-    }
+            
+        } catch(error) {
+            console.log(error.message)
+        }
+    }, [title,account, category, date, amount, note, userId]);
     return (
-        <form onSubmit={() => {
-            handleAddEntryTest();
+        <form onSubmit={(event) => {
+            handleAddEntryTest(event);
             props.modalIsOpen(false);
         }}>
             <span>
