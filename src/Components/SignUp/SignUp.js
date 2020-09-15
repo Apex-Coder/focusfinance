@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import { withRouter } from 'react-router';
+import {  Redirect, Link } from 'react-router-dom';
 import * as firebase from 'firebase/app';
 import app from '../../Configuration/base';
 
@@ -31,20 +32,26 @@ const SignUp = ({ history }) => {
     }, [history]);
 
     return (
-        <div>
+        <div className="form-container">
             <h1>Sign Up</h1>
-            <form onSubmit={handleSignUp}>
-                <label>
-                    Email
-                    <input name="email" type="email" placeholder="Email" />
-                </label>
-                <label>
-                    Password
-                    <input name="password" type="password" placeholder="Password" />
-                </label>
-                <button type="submit">Sign Up</button>
-                <br />
-                <button type="button" onClick={handleGoogleSignin}>Sign Up with Google</button>
+            <form onSubmit={handleSignUp} className="form-style">
+                <label>Email</label>
+                <input name="email" type="email" placeholder="Email" />
+                
+                <label>Password</label>
+                <input name="password" type="password" placeholder="Password" />
+                
+                <button type="submit" id="login-btn">Sign Up</button>
+
+                <div className="btn-container">
+                        <Link to="/" id="notSignedUp" >Have an account</Link>
+                        <div className="google-btn">
+                            <div className="google-icon-wrapper">
+                                <div className="google-icon"></div>
+                            </div>
+                            <p className="btn-text" onClick={handleGoogleSignin}><b>Sign up with google</b></p>
+                        </div>
+                </div>
             </form>
         </div>
     );
