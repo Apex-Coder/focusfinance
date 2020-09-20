@@ -24,7 +24,7 @@ const AddEntryModal = (props) => {
                 "account": account,
                 "category": category,
                 "date": date,
-                "amount": amount,
+                "amount": +amount,
                 "note": note
             })
             

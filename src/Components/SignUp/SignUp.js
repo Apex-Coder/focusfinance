@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { withRouter } from 'react-router';
-import {  Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as firebase from 'firebase/app';
 import app from '../../Configuration/base';
 

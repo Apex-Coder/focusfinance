@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './income-entry';
 import AddEntryModal from './addEntryModal';
+import { TotalIncome } from '../TotalValues'
 
 const Income = () => {
     let displayname = "Income";
@@ -12,17 +13,20 @@ const Income = () => {
     return (
         <>
             <ReactNavbar />
-            <div className="main">
+            <div className="container">
                 <div>
-                    <span>
-                        <h1 className="title">{displayname}</h1>
-                        <button type="button" className="">Add +</button>
-                    </span>
+                    <div className="mainHeader">
+                        <h2 className="title">{displayname}</h2>
+                        <button type="button" className="addCategoryBtn">Add +</button>
+                    </div>
                 </div>
                 <hr />
                 <div>
-                    <h3>Entries</h3>
-                    <button type="button" className="" onClick={() => setModalIsOpen(true)}>Add Entry</button>
+                    <h3>Total Income : $<TotalIncome/></h3>
+                    <div className="subHeader">
+                        <h3>Entries</h3>
+                        <button type="button" className="addEntriesBtn" onClick={() => setModalIsOpen(true)}>Add Entry</button>
+                    </div>
                     <Entries />
                     <Modal
                         isOpen={modalIsOpen}

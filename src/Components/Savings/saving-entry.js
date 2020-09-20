@@ -27,34 +27,21 @@ const useEntries = () => {
 const Entries = ()=> {
     const entries = useEntries();
     return (
-        <>
-            <h4>List of Savings</h4>
-            <div>
-                <label>Sort By: </label>
-                <select>
-                    <option>Amount</option>
-                    <option>Date</option>
-                </select>
-            </div>
-            <div>
+        <section>
             {entries.map((entry) => 
-                <li key={entry.uid}>
-                    <div>
-                        <h4>{entry.title}</h4>
-                        <small>{entry.date}</small>
-                        <span>
-                            <h6>{entry.account}</h6>
-                            <h6>{entry.category}</h6>
-                            <h6>{entry.amount}</h6>
-                        </span>
-                        <p>
-                            {entry.note}
-                        </p>
-                    </div>
-                </li>
-            )}
+            <div className="card" key={entry.uid}>
+                <div className="card-text">
+                    <span className="date">{entry.date}</span>
+                    <hr />
+                    <h2>{entry.title}</h2>
+                    <p className="info">{entry.account}</p>
+                    <p className="info">{entry.category}</p>
+                    <p className="info">${entry.amount}</p>
+                    <p className="card-note">{entry.note}</p>
+                </div>
             </div>
-        </>
+            )}
+        </section>
     )
 };
 

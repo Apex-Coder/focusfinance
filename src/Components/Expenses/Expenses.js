@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
+import { TotalExpenses } from '../TotalValues';
 import './Expenses.css';
 
 Modal.setAppElement("#root");
@@ -16,15 +17,18 @@ const Expenses = () => {
             <ReactNavbar />
             <div className="container">
                 <div>
-                    <span>
-                        <h1 className="title">{displayname}</h1>
-                        <button type="button" className="">Add +</button>
-                    </span>
+                    <div className="mainHeader">
+                        <h2 className="title">{displayname}</h2>
+                        <button type="button" className="addCategoryBtn">Add +</button>
+                    </div>
                 </div>
                 <hr />
                 <div>
-                    <h3>Entries</h3>
-                    <button type="button" className="" onClick={() => setModalIsOpen(true)}>Add Entry</button>
+                    <h3>Total Expenses : $<TotalExpenses/></h3>
+                    <div className="subHeader">
+                        <h3 className="subHeader">Entries</h3>
+                        <button type="button" className="addEntriesBtn" onClick={() => setModalIsOpen(true)}>Add Entry</button>
+                    </div>
                     <Entries />
                     <Modal
                         isOpen={modalIsOpen}

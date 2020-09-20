@@ -1,18 +1,10 @@
 .container {
     margin-top: 9vh;
-    /* padding-right: 10%;
-    padding-left: 10%; */
     margin-right: auto;
     margin-left: auto;
     
     height: 100vh;
     width: 80%;
-}
-
-.title {
-    float: left;
-    padding: 0;
-    margin-bottom: 1vh;
 }
 
 hr {
@@ -23,5 +15,53 @@ hr {
     background-color:#bfbfbf;
     height: 1px;
   }
+
+
   
+  .card {
+      width: 300px;
+      padding: 1rem;
+      margin: 1rem auto 0; 
+    
+
+      border-radius: 18px;
+      background: whitesmoke;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+
+
+
+  .card-text {
+ 
+    margin: 25px;
+  }
+
+  .card-text .date {
+      color: #4285f4;
+      font-size: 16px;
+      font-weight: 800;
+  }
+
+  .card-note {
+      color: grey;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: left;
+  }
+
+  .info {
+    color: grey;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline;
+    margin: 0px 10px 0px 10px;
+}
+
+  .card-text h2 {
+      margin-top: 0px;
+      font-size: 24px;
+  }
+
+
 
