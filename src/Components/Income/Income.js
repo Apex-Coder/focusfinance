@@ -22,7 +22,7 @@ const Income = () => {
                 </div>
                 <hr />
                 <div>
-                    <h3>Total Income : $<TotalIncome/></h3>
+                    <h3>Total Income : <TotalIncome/></h3>
                     <div className="subHeader">
                         <h3>Entries</h3>
                         <button type="button" className="addEntriesBtn" onClick={() => setModalIsOpen(true)}>Add Entry</button>

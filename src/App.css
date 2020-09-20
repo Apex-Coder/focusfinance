@@ -88,6 +88,7 @@ body {
   align-items: center;
 }
 
+
 .App {
   text-align: center;
 }
@@ -101,6 +102,16 @@ body {
   margin-top: 14vh;
 }
 
+.dashboard-card {
+  width: 250px;
+  padding: 1rem;
+  margin: 1rem auto 0; 
+  
+  border-radius: 18px;
+  background: whitesmoke;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 /* Text Styles */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -137,6 +148,10 @@ body {
   .main {
     margin-top: 11vh;
   }
+  .dashboard-card-container {
+    display: flex;
+  }
+
 }
 @media screen and (max-width: 800px) {
   .main {

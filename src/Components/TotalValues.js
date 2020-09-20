@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import app from '../Configuration/base';
 
 
-
+const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
 
 const CalTotalExpenses = () => {
     const userId = app.auth().currentUser.uid;
     const [te, setTe] = useState(0);
-    var totalExpenses = 0;
+    var totalExpenses = useRef(0);
 
     useEffect(() => {
         const unsubscribe = app
@@ -20,20 +24,20 @@ const CalTotalExpenses = () => {
             }))
 
             newEntries.map((entry) => 
-                totalExpenses = totalExpenses + entry.amount
+                totalExpenses.current = totalExpenses.current + entry.amount
             )
-            setTe(totalExpenses)
+            setTe(totalExpenses.current)
         })
 
         return () => unsubscribe();
     }, [userId]);
-    return te;
+    return formatter.format(te);
 };
 
 const CalTotalSavings = () => {
     const userId = app.auth().currentUser.uid;
     const [ts, setTs] = useState(0);
-    var totalSavings = 0;
+    var totalSavings = useRef(0);
 
     useEffect(() => {
         const unsubscribe = app
@@ -45,20 +49,20 @@ const CalTotalSavings = () => {
                 ...doc.data()
             }))
             newEntries.map((entry) => 
-                totalSavings = totalSavings + entry.amount
+                totalSavings.current = totalSavings.current + entry.amount
             )
-            setTs(totalSavings)
+            setTs(totalSavings.current)
         })
 
         return () => unsubscribe();
     }, [userId]);
-    return ts;
+    return formatter.format(ts);
 };
 
 const CalTotalIncome = () => {
     const userId = app.auth().currentUser.uid;
     const [ti, setTi] = useState(0);
-    var totalIncome = 0;
+    var totalIncome = useRef(0);
 
     useEffect(() => {
         const unsubscribe = app
@@ -71,14 +75,14 @@ const CalTotalIncome = () => {
             }))
 
             newEntries.map((entry) => 
-                totalIncome = totalIncome + entry.amount
+                totalIncome.current = totalIncome.current + entry.amount
             )
-            setTi(totalIncome)
+            setTi(totalIncome.current)
         })
 
         return () => unsubscribe();
     }, [userId]);
-    return ti;
+    return formatter.format(ti);
 };
 
 export const  TotalExpenses = () => {
