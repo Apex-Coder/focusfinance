@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 
 import app from '../../Configuration/base';
+import CategoriesDropdown from '../Utilities/CategoriesDropdown';
 
 const AddEntryModal = (props) => {
     const [title, setTitle] = useState('');
@@ -33,7 +34,7 @@ const AddEntryModal = (props) => {
         }
     }, [title,account, category, date, amount, note, userId]);
     return (
-        <form onSubmit={(event) => {
+        <form className="entry-form" onSubmit={(event) => {
             handleAddEntryTest(event);
             props.modalIsOpen(false);
         }}>
@@ -46,7 +47,9 @@ const AddEntryModal = (props) => {
             <label>Account</label>
             <input type="text"  value={account} onChange={e => setAccount(e.currentTarget.value)} /><br />
             <label>Category</label>
-            <input type="text" value={category} onChange={e => setCategory(e.currentTarget.value)} /><br />
+            <select onChange={e => setCategory(e.currentTarget.value)}>
+                <CategoriesDropdown />
+            </select><br />
             <label>Date</label>
             <input type="date" value={date} onChange={e => setDate(e.currentTarget.value)} /><br />
             <label>Amount</label>

@@ -63,5 +63,13 @@ hr {
       font-size: 24px;
   }
 
+  .entry-options {
+      font-size: 24px;
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      cursor: pointer;
+  }
+
 
 

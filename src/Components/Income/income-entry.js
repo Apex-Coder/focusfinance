@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import app from '../../Configuration/base';
+import { removeEntry, updateEntry } from '../Utilities/Queries';
 
 const useEntries = () => {
     const [entries, setEntries] = useState([]);
@@ -29,9 +30,15 @@ const Entries = ()=> {
     return (
         <section>
             {entries.map((entry) => 
-                <div className="card" key={entry.uid}>
+                <div className="card" key={entry.id}>
                     <div className="card-text">
-                        <span className="date">{entry.date}</span>
+                        <div className="subHeader">
+                            <span className="date">{entry.date}</span>
+                            <span className="entry-options">
+                            <span onClick={e => updateEntry(entry.id, entry.uid, "savings")}>. . .</span>
+                            <div onClick={e => removeEntry(entry.id, entry.uid, "savings")}>X</div>
+                        </span>
+                        </div>
                         <hr />
                         <h2>{entry.title}</h2>
                         <p className="info">{entry.account}</p>
