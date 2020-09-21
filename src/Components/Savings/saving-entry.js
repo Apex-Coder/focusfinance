@@ -36,7 +36,7 @@ const Entries = ()=> {
                         <span className="date">{entry.date}</span>
                         <span className="entry-options">
                             <span onClick={e => updateEntry(entry.id, entry.uid, "savings")}>. . .</span>
-                            <div onClick={e => removeEntry(entry.id, entry.uid, "savings")}>X</div>
+                            <button type="button" onClick={(e) => removeEntry(entry.id, entry.uid, "savings")}>X</button>
                         </span>
                     </div>
                     <hr />

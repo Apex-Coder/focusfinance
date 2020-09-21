@@ -35,9 +35,9 @@ const Entries = ()=> {
                         <div className="subHeader">
                             <span className="date">{entry.date}</span>
                             <span className="entry-options">
-                            <span onClick={e => updateEntry(entry.id, entry.uid, "savings")}>. . .</span>
-                            <div onClick={e => removeEntry(entry.id, entry.uid, "savings")}>X</div>
-                        </span>
+                                <span onClick={e => updateEntry(entry.id, entry.uid, "income")}>. . .</span>
+                                <button type="button" onClick={(e) => removeEntry(entry.id, entry.uid, "income")}>X</button>
+                            </span>
                         </div>
                         <hr />
                         <h2>{entry.title}</h2>
