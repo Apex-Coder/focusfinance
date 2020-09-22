@@ -21,7 +21,11 @@ header {
   left: 0;
   margin-left: 1em;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -61,9 +65,17 @@ nav {
   width: 100%;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  -webkit-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
   transform: scale(1, 0);
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
   transform-origin: top;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  -o-transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 nav ul {
@@ -83,6 +95,8 @@ nav a {
   font-size: 1.2rem;
   text-transform: uppercase;
   opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out;
   transition: opacity 150ms ease-in-out;
 }
 
@@ -91,10 +105,14 @@ nav a:hover {
 }
 
 .nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 .nav-toggle:checked ~ nav a {
   opacity: 1;
+  -webkit-transition: opacity 250ms ease-in-out 250ms;
+  -o-transition: opacity 250ms ease-in-out 250ms;
   transition: opacity 250ms ease-in-out 250ms;
 }
 @media screen and (min-width: 800px) {
@@ -114,13 +132,21 @@ nav a:hover {
   }
   nav {
     all: unset;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
     grid-column: 3 / 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     jusitfy-content: flex-end;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
     align-items:center;
   }
 
   nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -144,12 +170,20 @@ nav a:hover {
     left: 0;
     right: 0;
     border-radius: 10px;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
     transform: scale(0, 1);
+    -webkit-transition: -webkit-transform ease-in-out 250ms;
+    transition: -webkit-transform ease-in-out 250ms;
+    -o-transition: transform ease-in-out 250ms;
     transition: transform ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 
   }
 
   nav a:hover::before {
+    -webkit-transform: scale(1,1);
+    -ms-transform: scale(1,1);
     transform: scale(1,1);
   }
 }

@@ -10,6 +10,7 @@ const useEntries = () => {
         const unsubscribe = app
         .firestore()
         .collection('users/' + userId +'/expenses')
+        .orderBy("date", "desc")
         .onSnapshot((snapshot) => {
             const newEntries = snapshot.docs.map((doc) => ({
                 id: doc.id,
@@ -36,7 +37,7 @@ const Entries = (props)=> {
                             <span className="date">{entry.date}</span>
                             <span className="entry-options">
                                 <span onClick={e => updateEntry(entry.id, entry.uid, "expenses")}>. . .</span>
-                                <button type="button" onClick={(e) => removeEntry(entry.id, entry.uid, "expenses", props)}>X</button>
+                                <button type="button" className="rmEntryBtn" onClick={(e) => removeEntry(entry.id, entry.uid, "expenses", props)}> &#10006;</button>
                             </span>
                         </div>
                         <hr />

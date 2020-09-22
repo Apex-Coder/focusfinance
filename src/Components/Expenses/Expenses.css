@@ -26,6 +26,7 @@ hr {
 
       border-radius: 18px;
       background: whitesmoke;
+      -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
   }
@@ -65,10 +66,26 @@ hr {
 
   .entry-options {
       font-size: 24px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
       width: 50%;
       cursor: pointer;
+  }
+
+  .rmEntryBtn {
+      border: none;
+      outline: none;
+      padding: 0 0.5rem 0 0.5rem;
+      background-color:#4285f4;
+      color: #ffffff;
+  }
+
+  .rmEntryBtn:hover {
+    background-color: #dcdcdc;
+    color: #4285f4;
   }
 
 
