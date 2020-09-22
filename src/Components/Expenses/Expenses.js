@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import { ToastContainer, toast } from 'react-toastify';
 
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalExpenses } from '../TotalValues';
 import './Expenses.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 Modal.setAppElement("#root");
 const Expenses = () => {
@@ -29,11 +31,16 @@ const Expenses = () => {
                         <h3 className="subHeader">Entries</h3>
                         <button type="button" className="addEntriesBtn" onClick={() => setModalIsOpen(true)}>Add Entry</button>
                     </div>
-                    <Entries />
+                    <ToastContainer 
+                        position="bottom-right"
+                        autoClose={3000}
+                        pauseOnFocusLoss    
+                    />
+                    <Entries toast={toast} />
                     <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}>
-                        <AddEntryModal modalIsOpen={setModalIsOpen} />
+                        <AddEntryModal modalIsOpen={setModalIsOpen} toast={toast} />
                     </Modal>
                 </div>
             </div>

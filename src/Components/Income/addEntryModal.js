@@ -28,11 +28,12 @@ const AddEntryModal = (props) => {
                 "amount": +amount,
                 "note": note
             })
+            .then(props.toast.success("Entry sucessfully added."))
             
         } catch(error) {
-            console.log(error.message)
+            props.toast.error("Failed to add entry.");
         }
-    }, [title,account, category, date, amount, note, userId]);
+    }, [title,account, category, date, amount, note, userId, props]);
     return (
         <form className="entry-form" onSubmit={(event) => {
             handleAddEntryTest(event);

@@ -25,7 +25,7 @@ const useEntries = () => {
 
     return entries;
 }
-const Entries = ()=> {
+const Entries = (props)=> {
     const entries = useEntries();
     return (
         <section>
@@ -36,7 +36,7 @@ const Entries = ()=> {
                             <span className="date">{entry.date}</span>
                             <span className="entry-options">
                                 <span onClick={e => updateEntry(entry.id, entry.uid, "income")}>. . .</span>
-                                <button type="button" onClick={(e) => removeEntry(entry.id, entry.uid, "income")}>X</button>
+                                <button type="button" onClick={(e) => removeEntry(entry.id, entry.uid, "income", props)}>X</button>
                             </span>
                         </div>
                         <hr />

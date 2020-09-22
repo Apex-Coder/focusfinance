@@ -18,6 +18,7 @@ const CalTotalExpenses = () => {
         .firestore()
         .collection('users/' + userId +'/expenses')
         .onSnapshot((snapshot) =>{
+            totalExpenses.current = 0;
             const newEntries = snapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data()
@@ -44,6 +45,7 @@ const CalTotalSavings = () => {
         .firestore()
         .collection('users/' + userId +'/savings')
         .onSnapshot((snapshot) =>{
+            totalSavings.current = 0;
             const newEntries = snapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data()
@@ -69,6 +71,7 @@ const CalTotalIncome = () => {
         .firestore()
         .collection('users/' + userId +'/income')
         .onSnapshot((snapshot) =>{
+            totalIncome.current = 0;
             const newEntries = snapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data()
