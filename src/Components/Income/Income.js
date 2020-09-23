@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { ToastContainer, toast } from 'react-toastify';
+import { confirmAlert } from 'react-confirm-alert';
 
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './income-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalIncome } from '../TotalValues';
+
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const Income = () => {
     let displayname = "Income";
@@ -34,7 +37,7 @@ const Income = () => {
                         autoClose={3000}
                         pauseOnFocusLoss
                     />
-                    <Entries toast={toast} />
+                    <Entries toast={toast} confirmAlert={confirmAlert} />
                     <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}>

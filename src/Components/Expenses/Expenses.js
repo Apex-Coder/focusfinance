@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { ToastContainer, toast } from 'react-toastify';
+import { confirmAlert } from 'react-confirm-alert';
 
 import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalExpenses } from '../TotalValues';
+
 import './Expenses.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 Modal.setAppElement("#root");
 const Expenses = () => {
@@ -36,7 +39,7 @@ const Expenses = () => {
                         autoClose={3000}
                         pauseOnFocusLoss    
                     />
-                    <Entries toast={toast} />
+                    <Entries toast={toast} confirmAlert={confirmAlert} />
                     <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}>

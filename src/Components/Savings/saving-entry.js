@@ -37,7 +37,24 @@ const Entries = (props)=> {
                         <span className="date">{entry.date}</span>
                         <span className="entry-options">
                             <span onClick={e => updateEntry(entry.id, entry.uid, "savings")}>. . .</span>
-                            <button type="button" className="rmEntryBtn" onClick={(e) => removeEntry(entry.id, entry.uid, "savings", props)}> &#10006;</button>
+                            <button 
+                                type="button" 
+                                className="rmEntryBtn" 
+                                onClick={(e) => {
+                                    props.confirmAlert({
+                                        title: 'Confirm to delete',
+                                        message: 'Are you sure you want to delete entry?',
+                                        buttons: [
+                                            {
+                                                label: 'Yes',
+                                                onClick: () => {removeEntry(entry.id, entry.uid, "savings", props)}
+                                            },
+                                            {
+                                                label: 'No',                                            }
+                                        ]
+                                    })
+                                }}
+                            > &#10006;</button>
                         </span>
                     </div>
                     <hr />
