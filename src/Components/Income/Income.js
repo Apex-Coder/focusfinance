@@ -7,6 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './income-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalIncome } from '../TotalValues';
+import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -39,6 +40,7 @@ const Income = () => {
                     />
                     <Entries toast={toast} confirmAlert={confirmAlert} />
                     <Modal
+                        // style={customStyles}
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}>
                         <AddEntryModal modalIsOpen={setModalIsOpen} toast={toast} />

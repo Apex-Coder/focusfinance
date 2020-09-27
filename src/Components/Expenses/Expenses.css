@@ -88,5 +88,78 @@ hr {
     color: #4285f4;
   }
 
+  /* .entry-form {
 
+  } */
 
+  .modalHeader {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+  }
+  .addEntryInputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .addEntryInputGroup {
+      display: block;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
+
+  }
+
+  .addEntryInputGroup > label {
+    color: #387ce9;
+    padding-bottom: 1rem;
+    float: left;
+    /* font-weight: 600; */
+  }
+
+  .addEntryInputGroup > input, select {
+      float: right;
+      width: 100%;
+      height: 2.5rem;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background: #f8f8f8;
+      
+  }
+
+  .addEntryInputGroup > input:focus {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(0,0,0,.09);
+    
+  }
+
+  .entrySubmitBtnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .entrySubmitBtn {
+      border: none;
+      outline: none;
+      text-decoration:none;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      background: #387ce9;
+  }
+
+  .closeModalBtn {
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #387ce9;
+  }

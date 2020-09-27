@@ -7,6 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalExpenses } from '../TotalValues';
+import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import './Expenses.css';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,6 +42,7 @@ const Expenses = () => {
                     />
                     <Entries toast={toast} confirmAlert={confirmAlert} />
                     <Modal
+                        // style={customStyles}
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}>
                         <AddEntryModal modalIsOpen={setModalIsOpen} toast={toast} />

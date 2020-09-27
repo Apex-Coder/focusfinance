@@ -39,26 +39,41 @@ const AddEntryModal = (props) => {
             handleAddEntryTest(event);
             props.modalIsOpen(false);
         }}>
-            <span>
+            <div className="modalHeader">
                 <h1>Add Entry</h1>
-                <button type="button" onClick={() => props.modalIsOpen(false)}>X</button>
-            </span>
-            <label>Title</label>
-            <input type="text" value={title} onChange={e => setTitle(e.currentTarget.value)} /><br />
-            <label>Account</label>
-            <input type="text"  value={account} onChange={e => setAccount(e.currentTarget.value)} /><br />
-            <label>Category</label>
-            <select onChange={e => setCategory(e.currentTarget.value)}>
-                <CategoriesDropdown />
-            </select><br />
-            <label>Date</label>
-            <input type="date" value={date} onChange={e => setDate(e.currentTarget.value)} /><br />
-            <label>Amount</label>
-            <input type="number" min="1" step="any"  value={amount} onChange={e => setAmount(e.currentTarget.value)} /><br />
-            <label>Note</label>
-            <input type="text" value={note} onChange={e => setNote(e.currentTarget.value)} />
-            <br />
-            <button type='submit'>Submit</button>
+                <button type="button" className="closeModalBtn" onClick={() => props.modalIsOpen(false)}>X</button>
+            </div>
+            <div className="addEntryInputContainer">
+                <span className="addEntryInputGroup">
+                    <label>Title</label>
+                    <input type="text" value={title} onChange={e => setTitle(e.currentTarget.value)} />
+                </span><br />
+                <span className="addEntryInputGroup">
+                    <label>Account</label>
+                    <input type="text"  value={account} onChange={e => setAccount(e.currentTarget.value)} />
+                </span><br />
+                <span className="addEntryInputGroup">
+                    <label>Category</label>
+                    <select onChange={e => setCategory(e.currentTarget.value)}>
+                        <CategoriesDropdown />
+                    </select>
+                </span><br />
+                <span className="addEntryInputGroup">
+                    <label>Date</label>
+                    <input type="date" value={date} onChange={e => setDate(e.currentTarget.value)} />
+                </span><br />
+                <span className="addEntryInputGroup">
+                    <label>Amount</label>
+                    <input type="number" min="1" step="any"  value={amount} onChange={e => setAmount(e.currentTarget.value)} />
+                </span><br />
+                <span className="addEntryInputGroup">
+                    <label>Note</label>
+                    <input type="text" value={note} onChange={e => setNote(e.currentTarget.value)} />
+                </span>
+            </div><br />
+            <div className="entrySubmitBtnWrapper">
+                <button type='submit'className="entrySubmitBtn">Submit</button>
+            </div>
         </form>
     )
 };

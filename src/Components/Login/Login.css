@@ -42,7 +42,7 @@
 }
 
 .form-style input:focus {
-    background: rgba(0,0,0,.09);;
+    background: rgba(0,0,0,.09);
     color: #ffffff;
     font-weight: 500;
     border-radius: 10px;
