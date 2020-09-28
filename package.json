@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "dotenv": "^8.2.0",
     "firebase": "^7.19.1",
+    "ios-webkit-debug-proxy": "0.0.3",
     "react": "^16.13.1",
     "react-confirm-alert": "^2.6.2",
     "react-dom": "^16.13.1",
