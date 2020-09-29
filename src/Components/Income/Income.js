@@ -7,7 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './income-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalIncome } from '../TotalValues';
-import { customStyles } from '../Utilities/ModalComponentStyles';
+// import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-confirm-alert/src/react-confirm-alert.css';

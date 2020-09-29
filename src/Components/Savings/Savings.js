@@ -7,7 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './saving-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalSavings } from '../TotalValues';
-import { customStyles } from '../Utilities/ModalComponentStyles';
+// import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-confirm-alert/src/react-confirm-alert.css';

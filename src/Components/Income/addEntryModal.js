@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import app from '../../Configuration/base';
 import CategoriesDropdown from '../Utilities/CategoriesDropdown';
+import AccountDropdown from '../Utilities/AccountDropdown';
 import { addToAccountTotal } from '../Utilities/Queries';
 
 const AddEntryModal = (props) => {
@@ -54,7 +55,9 @@ const AddEntryModal = (props) => {
                 </span><br />
                 <span className="addEntryInputGroup">
                     <label>Account</label>
-                    <input type="text"  value={account} onChange={e => setAccount(e.currentTarget.value)} />
+                    <select onChange={e => setAccount(e.currentTarget.value)}>
+                        <AccountDropdown />
+                    </select>
                 </span><br />
                 <span className="addEntryInputGroup">
                     <label>Category</label>

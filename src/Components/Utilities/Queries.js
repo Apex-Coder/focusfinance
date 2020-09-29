@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 
 import app from '../../Configuration/base';
 
@@ -61,4 +61,36 @@ export const addToAccountTotal = (uid, uAccount, uAmount) => {
     })
 
     // console.log("User ID: " + userId + " , " + account);
+}
+
+export const addAccount = (uid, uAccount) => {
+    const userId = uid;
+    const account = uAccount;
+
+    try {
+        app.firestore()
+        .collection('users/' + userId + "/accounts")
+        .add({
+            "name" : account
+        })
+        .then(console.log("Account Added" ))
+    } catch(error) {
+        console.log("Error: " + error);
+    }
+}
+
+export const addCategory = (uid, uCategory) => {
+    const userId = uid;
+    const category = uCategory;
+
+    try {
+        app.firestore()
+        .collection('users/' + userId + "/categories")
+        .add({
+            "name" : category
+        })
+        .then(console.log("Category Added" ))
+    } catch(error) {
+        console.log("Error: " + error);
+    }
 }

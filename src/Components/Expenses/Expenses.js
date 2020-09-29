@@ -7,7 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalExpenses } from '../TotalValues';
-import { customStyles } from '../Utilities/ModalComponentStyles';
+// import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import './Expenses.css';
 import 'react-toastify/dist/ReactToastify.css';
