@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Modal from 'react-modal';
 import { ToastContainer, toast } from 'react-toastify';
-import { confirmAlert } from 'react-confirm-alert';
+// import { confirmAlert } from 'react-confirm-alert';
 
 import ReactNavbar from '../ui/ReactNavbar';
 import AddAccCatModal from './addAccCatModal';
@@ -24,7 +24,7 @@ const Settings = () => {
                 </>
                 <hr />
                 <div>
-                    <section>
+                    <section className="SettingsAC">
                         <h4>Accounts/Category</h4>
                         <ToastContainer 
                             position="bottom-right"
@@ -35,10 +35,7 @@ const Settings = () => {
                             <li><a href="true" onClick={(e) => {
                                 e.preventDefault();
                                 setModalIsOpen(true)
-                                }} >Add Account</a></li>
-                            <li><a href="true" onClick={(e) => {
-                                e.preventDefault();
-                                setModalIsOpen(true)}}>Category</a></li>
+                                }} >Add Account / Category</a></li>
                         </ul>
                     </section>
                     <Modal

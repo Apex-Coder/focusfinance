@@ -3,6 +3,7 @@ import React from 'react';
 const CategoriesDropdown = () => {
     return (
         <>
+            <option /* selected="true" */ disabled="disabled">Choose Category</option> 
             <option value="Food" key="">Food</option>
             <option value="Social Life" key="Social-Life">Social Life</option>
             <option value="Transportation" key="Transportation">Transportation</option>

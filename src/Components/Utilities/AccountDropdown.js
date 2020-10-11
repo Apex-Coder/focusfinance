@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect  } from 'react';
+import React, { /* useCallback, */ useState, useEffect  } from 'react';
 
 import app from '../../Configuration/base';
 
@@ -30,6 +30,7 @@ const AccountDropdown = () => {
     const accounts = useAccounts();
     return (
         <>
+            <option /* selected={true} */ disabled="disabled">Choose Account</option>
             <option value="Cash" key="Cash">Cash</option>
             {accounts.map((account) => 
                 <option value={account.name} key={account.id} >{account.name}</option>

@@ -39,7 +39,7 @@ hr {
   }
 
   .card-text .date {
-      color: #4285f4;
+      color: rgb(66, 133, 244);
       font-size: 16px;
       font-weight: 800;
   }
