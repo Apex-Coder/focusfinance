@@ -7,6 +7,7 @@ import ReactNavbar from '../ui/ReactNavbar';
 import Entries from './expense-entry';
 import AddEntryModal from './addEntryModal';
 import { TotalExpenses } from '../TotalValues';
+import PieChartTemplate from '../Utilities/PieChartTemplate'
 // import { customStyles } from '../Utilities/ModalComponentStyles';
 
 import './Expenses.css';
@@ -29,6 +30,9 @@ const Expenses = () => {
                     </div>
                 </div>
                 <hr />
+                <div className="centerContent">
+                    <PieChartTemplate />
+                </div>
                 <div>
                     <h3>Total Expenses : <TotalExpenses/></h3>
                     <div className="subHeader">
