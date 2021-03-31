@@ -30,9 +30,9 @@ const Expenses = () => {
                     </div>
                 </div>
                 <hr />
-                <div className="centerContent">
+                {/* <div className="centerContent">
                     <PieChartTemplate />
-                </div>
+                </div> */}
                 <div>
                     <h3>Total Expenses : <TotalExpenses/></h3>
                     <div className="subHeader">
