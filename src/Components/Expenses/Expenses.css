@@ -163,3 +163,10 @@ hr {
     color: #ffffff;
     background: #387ce9;
   }
+
+  .centerContent {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    
+  }

@@ -32,6 +32,7 @@ const SignUp = ({ history }) => {
     }, [history]);
 
     return (
+        <div id="hero-image-signup">
         <div className="form-container">
             <h1>Sign Up</h1>
             <form onSubmit={handleSignUp} className="form-style">
@@ -53,6 +54,7 @@ const SignUp = ({ history }) => {
                         </div>
                 </div>
             </form>
+        </div>
         </div>
     );
 };
